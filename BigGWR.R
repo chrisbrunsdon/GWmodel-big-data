@@ -272,8 +272,9 @@ gwr.big <- function(spdf,yvar,xvars,bw) {
 ########################################################################
 ########################################################################
 
-setwd("H:/OAC_2011")    # office
-setwd("E:/OAC_2011")    # laptop
+#setwd("H:/OAC_2011")    # office
+#setwd("E:/OAC_2011")    # laptop
+setwd("/Users/chrisbrunsdon/Dropbox/OAC_2011") # Chris's Mac
 
 
 PopLkp <- read.csv("2011 OA Population and Lookup.csv",stringsAsFactors=F)
