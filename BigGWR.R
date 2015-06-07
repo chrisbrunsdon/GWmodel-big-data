@@ -392,7 +392,7 @@ legend(-30000, 1250000, legend=names(attr(colcode, "table")),
 ##############################################################################
 ##############################################################################
 
-setwd("H:/OAC_2011")    # office
+#setwd("H:/OAC_2011")    # office
 Data90 <- read.table("GWRmerge90.dat",header=F,sep=" ",stringsAsFactors=F)
 colnames(Data90) <- c("Easting","Northing","Purprice","BldIntWr","BldPostW","Bld60s",
  "Bld70s","Bld80s","TypDetch","TypSemiD","TypFlat","GarSingl","GarDoubl","Tenfree",
