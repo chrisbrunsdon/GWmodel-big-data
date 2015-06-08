@@ -238,7 +238,7 @@ gwr.big <- function(spdf,yvar,xvars,bw) {
    kd.search <- nn3(coordinates(spdf),coordinates(spdf),bw)
 
    betaHat <- matrix(NA,N,length(xvars)+1)
-
+   pb <- txtProgressBar(min = 0, max = N, style = 3)
    for (iter in 1:N) {
 
       rows.needed <- kd.search[iter,]
@@ -256,8 +256,9 @@ gwr.big <- function(spdf,yvar,xvars,bw) {
       Yw <- matrix(Y * W,bw,1)
 
       betaHat[iter,] <- solve(t(Xw) %*% Xw, t(Xw) %*% Yw)
+      setTxtProgressBar(pb, i)
    }
-
+      close(pb)
       betaHat
 }
 
